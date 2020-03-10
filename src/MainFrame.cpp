@@ -13,9 +13,6 @@ MainFrame::MainFrame(const wxString &title,
                      const wxSize &size)
     : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
-    Editors::HtmlEditor htmlEditor(this->GetMainWindowOfCompositeControl(),
-                                   "<html>Yarrr!</html>");
-    htmlEditor.ShowModal();
     wxMenu *menuFile = new wxMenu;
     menuFile->Append(ID_Hello,
                      "&Hello...\tCtrl-H",

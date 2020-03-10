@@ -1,4 +1,5 @@
 #include <string>
+#include <wx/gdicmn.h>
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
@@ -10,8 +11,8 @@ using namespace Sockat;
 
 bool App::OnInit()
 {
-    MainFrame *frame =
-        new MainFrame(s_title, wxPoint(50, 50), wxSize(450, 340));
+    MainFrame *frame = new MainFrame(
+        s_title, wxDefaultPosition, wxSize(s_defaultWidth, s_defaultHeight));
     frame->Show(true);
     return true;
 }

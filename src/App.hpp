@@ -14,5 +14,7 @@ class App : public wxApp
 
   private:
     static constexpr char s_title[] = "Sockat";
+    static constexpr int s_defaultWidth = 800;
+    static constexpr int s_defaultHeight = 600;
 };
 } // namespace Sockat
