@@ -6,13 +6,15 @@
 #include "Editors/HtmlEditor.hpp"
 #include "MainFrame.hpp"
 
+using namespace Sockat;
+
 MainFrame::MainFrame(const wxString &title,
                      const wxPoint &pos,
                      const wxSize &size)
     : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
-    HtmlEditor htmlEditor(this->GetMainWindowOfCompositeControl(),
-                          "<html>Yarrr!</html>");
+    Editors::HtmlEditor htmlEditor(this->GetMainWindowOfCompositeControl(),
+                                   "<html>Yarrr!</html>");
     htmlEditor.ShowModal();
     wxMenu *menuFile = new wxMenu;
     menuFile->Append(ID_Hello,

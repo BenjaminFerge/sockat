@@ -5,12 +5,14 @@
 #include <wx/wx.h>
 #endif
 
+using namespace Sockat::Editors;
+
 void HtmlEditor::onClose(wxCloseEvent &evt) { EndModal(GetReturnCode()); }
 
 HtmlEditor::HtmlEditor(wxWindow *parent, wxString source)
     : wxDialog(parent,
                wxID_ANY,
-               "Source Code",
+               "HTML Editor",
                wxDefaultPosition,
                wxSize(700, 500),
                wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)

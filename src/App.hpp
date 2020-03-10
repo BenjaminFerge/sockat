@@ -3,8 +3,11 @@
 #include <wx/wx.h>
 #endif
 
-class Sockat : public wxApp
+namespace Sockat
+{
+class App : public wxApp
 {
   public:
     virtual bool OnInit();
 };
+} // namespace Sockat

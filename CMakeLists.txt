@@ -8,8 +8,8 @@ add_executable(${PROJECT_NAME}
 	src/main.cpp
 	src/MainFrame.hpp
 	src/MainFrame.cpp
-	src/Sockat.hpp
-	src/Sockat.cpp
+	src/App.hpp
+	src/App.cpp
 	src/Editors/HtmlEditor.hpp
 	src/Editors/HtmlEditor.cpp
 )

@@ -4,6 +4,8 @@
 #include <wx/wx.h>
 #endif
 
+namespace Sockat::Editors
+{
 enum { MARGIN_LINE_NUMBERS };
 
 class HtmlEditor : public wxDialog
@@ -12,3 +14,4 @@ class HtmlEditor : public wxDialog
     void onClose(wxCloseEvent &evt);
     HtmlEditor(wxWindow *parent, wxString source);
 };
+} // namespace Sockat::Editors
