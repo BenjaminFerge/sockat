@@ -10,6 +10,8 @@ add_executable(${PROJECT_NAME}
 	src/MainFrame.cpp
 	src/Sockat.hpp
 	src/Sockat.cpp
+	src/Editors/HtmlEditor.hpp
+	src/Editors/HtmlEditor.cpp
 )
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
 
