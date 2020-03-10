@@ -1,3 +1,5 @@
+#pragma once
+
 #include <wx/stc/stc.h>
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
