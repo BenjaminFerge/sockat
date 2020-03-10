@@ -14,9 +14,8 @@ MainFrame::MainFrame(const wxString &title,
     : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     wxMenu *menuFile = new wxMenu;
-    menuFile->Append(ID_Hello,
-                     "&Hello...\tCtrl-H",
-                     "Help string shown in status bar for this menu item");
+    menuFile->Append(
+        ID_NewProject, "&New Project\tCtrl-N", "Create a new Sockat project.");
     menuFile->AppendSeparator();
     menuFile->Append(wxID_EXIT);
     wxMenu *menuHelp = new wxMenu;
@@ -26,16 +25,14 @@ MainFrame::MainFrame(const wxString &title,
     menuBar->Append(menuHelp, "&Help");
     SetMenuBar(menuBar);
     CreateStatusBar();
-    SetStatusText("Welcome to wxWidgets!");
+    SetStatusText("Welcome to Sockat!");
 }
-void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }
-void MainFrame::OnAbout(wxCommandEvent &event)
+void MainFrame::onExit(wxCommandEvent &event) { Close(true); }
+void MainFrame::onAbout(wxCommandEvent &event)
 {
-    wxMessageBox("This is a wxWidgets' Hello world sample",
-                 "About Hello World",
-                 wxOK | wxICON_INFORMATION);
+    wxMessageBox(s_aboutMessage, "About Sockat", wxOK | wxICON_INFORMATION);
 }
-void MainFrame::OnHello(wxCommandEvent &event)
+void MainFrame::onNewProject(wxCommandEvent &event)
 {
-    wxLogMessage("Hello world from wxWidgets!");
+    wxLogMessage("Creating a new Sockat project...");
 }

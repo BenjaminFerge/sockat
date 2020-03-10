@@ -11,9 +11,10 @@ class MainFrame : public wxFrame
     MainFrame(const wxString &title, const wxPoint &pos, const wxSize &size);
 
   private:
-    void OnHello(wxCommandEvent &event);
-    void OnExit(wxCommandEvent &event);
-    void OnAbout(wxCommandEvent &event);
+    void onNewProject(wxCommandEvent &event);
+    void onExit(wxCommandEvent &event);
+    void onAbout(wxCommandEvent &event);
     wxDECLARE_EVENT_TABLE();
+    static constexpr char s_aboutMessage[] = "About message...";
 };
-enum { ID_Hello = 1 };
+enum { ID_NewProject = 1 };
