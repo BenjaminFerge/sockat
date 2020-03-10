@@ -4,7 +4,13 @@ project(sockat CXX)
 find_package(wxWidgets REQUIRED COMPONENTS net core base)
 include(${wxWidgets_USE_FILE})
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME}
+	src/main.cpp
+	src/MainFrame.hpp
+	src/MainFrame.cpp
+	src/Sockat.hpp
+	src/Sockat.cpp
+)
 target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
 
 add_custom_target(
