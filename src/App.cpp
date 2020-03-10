@@ -8,8 +8,6 @@
 
 using namespace Sockat;
 
-constexpr char App::s_title[];
-
 bool App::OnInit()
 {
     MainFrame *frame =

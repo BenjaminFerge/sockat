@@ -20,3 +20,8 @@ add_custom_target(
   COMMAND ${PROJECT_NAME}
   DEPENDS ${PROJECT_NAME}
   WORKING_DIRECTORY ${CMAKE_PROJECT_DIR})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+            CXX_STANDARD 17
+            CXX_EXTENSIONS OFF
+)
