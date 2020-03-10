@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(sockat CXX)
 
-find_package(wxWidgets REQUIRED COMPONENTS net core base)
+find_package(wxWidgets REQUIRED COMPONENTS net core base stc)
 include(${wxWidgets_USE_FILE})
 
 add_executable(${PROJECT_NAME}
