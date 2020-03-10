@@ -11,5 +11,8 @@ class App : public wxApp
 {
   public:
     virtual bool OnInit();
+
+  private:
+    static constexpr char s_title[] = "Sockat";
 };
 } // namespace Sockat

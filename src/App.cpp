@@ -1,3 +1,4 @@
+#include <string>
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
@@ -7,10 +8,12 @@
 
 using namespace Sockat;
 
+constexpr char App::s_title[];
+
 bool App::OnInit()
 {
     MainFrame *frame =
-        new MainFrame("Hello World", wxPoint(50, 50), wxSize(450, 340));
+        new MainFrame(s_title, wxPoint(50, 50), wxSize(450, 340));
     frame->Show(true);
     return true;
 }
